@@ -81,7 +81,7 @@ Strong scientific writing and presentation skills; referee for JHEP, PLB and PRL
 
 * ATLAS Collaboration, *Deep Learning for Pion Identification and Energy Calibration with the ATLAS Detector*, ATL-PHYS-PUB-2020-018 (2020), [CDS Record](https://cds.cern.ch/record/2724632)
 
-### **Landmark Heavy-Ion Physics Results**
+### **Heavy-Ion Physics Results**
 * **ATLAS Collaboration, *Observation of a Centrality-Dependent Dijet Asymmetry in Lead–Lead Collisions at √sNN= 2.76 TeV with the ATLAS Detector at the LHC*, Phys. Rev. Lett. 105 (2010) 252303, [arXiv:1011.6182](https://arxiv.org/abs/1011.6182)** *(First jet measurement in heavy-ion collisions)*
 
 * ATLAS Collaboration, *Measurement of photonuclear jet production in ultra-peripheral Pb+Pb collisions at √sNN=5.02 TeV with the ATLAS detector*, Submitted to Phys. Rev. D. (2024), [arXiv:2409.11060](https://arxiv.org/abs/2409.11060)
