@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-*A comprehensive record of invited talks, conference presentations, and seminars spanning experimental particle physics, heavy-ion physics, and machine learning applications.*
+*A comprehensive record of invited talks, conference presentations, and seminars.*
 
 ---
 

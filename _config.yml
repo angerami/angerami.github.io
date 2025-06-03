@@ -320,19 +320,4 @@ compress_html:
   ignore:
     envs: development
 
-    title: "Aaron Angerami"
-email: "your-email@domain.com"
-description: >-
-  Research scientist deploying physics to unlock the mysteries of artificial intelligence
-
-author:
-  name: "Aaron Angerami"
-  bio: "Research scientist | Physicist → AI | Former CERN researcher"
-  location: "Your Location"
-  links:
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en"
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0000-0001-7834-8750"
+ 
