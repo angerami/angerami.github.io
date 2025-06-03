@@ -5,15 +5,14 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
-
 # Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default"
 title                    : "Aaron Angerami"
-email                    : your-email@domain.com
+email                    : "aaron.angerami@gmail.com"
 description              : "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
 url                      : "https://angerami.github.io"
 repository               : "angerami/angerami.github.io"
+locale                   : "en-US"
+site_theme               : "default"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -21,27 +20,30 @@ repository               : "angerami/angerami.github.io"
 # Site Author
 author:
   name             : "Aaron Angerami"
-  avatar           : # path of avatar image, e.g. "/images/bio-photo.jpg"
+  # avatar           : "/images/bio-photo.jpg"  # Add your professional headshot
   bio              : "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
   location         : "San Francisco Bay Area"
-  email            : "your-email@domain.com"
+  email            : "aaron.angerami@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:your-email@domain.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "mailto:aaron.angerami@gmail.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/angerami"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "http://www.linkedin.com/in/aaron-angerami"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@your-medium-handle"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en"
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
       url: "https://orcid.org/0000-0001-7834-8750"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/angerami"
-# Publication Category - The following the list of publication categories and their headings
+
 publication_category:
   books:
     title: 'Books'
