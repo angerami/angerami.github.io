@@ -6,7 +6,7 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 # Basic Site Settings
-title                    : "Aaron Angerami"
+title                    : ""
 email                    : "aaron.angerami@gmail.com"
 description              : "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
 url                      : "https://angerami.github.io"
@@ -20,6 +20,7 @@ site_theme               : "default"
 # Site Author
 author:
   name: "Aaron Angerami"
+  avatar: false
   bio: "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
   location: "San Francisco Bay Area"
   email: "aaron.angerami@gmail.com"

@@ -89,7 +89,7 @@ Advanced studies of ultra-peripheral heavy-ion collisions, exploring photonuclea
 
 In the first Pb+Pb collisions at the LHC, the ATLAS experiment observed highly imbalanced dijet pairs, providing the first direct evidence of jet quenching in the quark-gluon plasma at unprecedented energies.
 
-**Skills:** Independent Research · Data Analysis
+**Skills:** Experimental Physics · Data Analysis · Analytical Skills
 
 **Publications:**
 - **[Observation of a Centrality-Dependent Dijet Asymmetry in Lead-Lead Collisions](https://arxiv.org/abs/1011.6182)** *(First jet measurement in heavy-ion collisions - field-defining result)*
