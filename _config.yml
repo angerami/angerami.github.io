@@ -28,6 +28,22 @@ author:
   googlescholar: "https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en"
   orcid: "https://orcid.org/0000-0001-7834-8750"
   medium: "https://medium.com/@aaron.angerami"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/angerami"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "http://www.linkedin.com/in/aaron-angerami"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@aaron.angerami"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0001-7834-8750"
 
 publication_category:
   books:

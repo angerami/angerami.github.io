@@ -24,7 +24,7 @@ My current research explores what I call the "Transformer-Spin Correspondence"�
 
 ## Personal Motivation
 
-My deepest insights into learning and intelligence came from an unexpected source: becoming a father. Watching my children's neurological development from early stages revealed the staggering complexity required to build a human mind. When we study adult learning, we're examining sophisticated processes running on mature neural hardware. But witnessing intelligence emerge from scratch—watching a brain bootstrap itself into consciousness—illuminated that understanding learning isn't just academic curiosity. It's essential for navigating the profound questions at the intersection of artificial and human intelligence.
+The spark igniting interest in artificial intelligence came from an unexpected source: becoming a father. Watching my children's neurological development from early stages revealed the staggering complexity required to build a human mind. When we study adult learning, we're examining sophisticated processes running on mature neural hardware. But witnessing intelligence emerge from scratch—watching a brain bootstrap itself into consciousness—illuminated that understanding learning isn't just academic curiosity. It's essential for navigating the profound questions at the intersection of artificial and human intelligence.
 
 ---
 
