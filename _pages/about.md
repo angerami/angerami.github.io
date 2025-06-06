@@ -8,7 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a research scientist deploying my background and experience as a physicist to problems in artificial intelligence, with a particular focus on applying experimental and inferential methodologies we use to make fundamental statements about nature to modern AI architectures.
+I am a research scientist deploying my background and experience as a physicist to problems in artificial intelligence. 
+My activities focuses on apply the experimental and inferential methodologies we use to make fundamental statements about nature to modern AI architectures.
 
 ## Research Background
 
