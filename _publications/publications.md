@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 ## Complete Publication List
-[<img src="images/inspire-logo.png" alt="INSPIRE HEP" style="height: 20px; vertical-align: middle;">](https://inspirehep.net/authors/1067316) | <i class="fab fa-orcid"></i> **[ORCID](https://orcid.org/0000-0001-7834-8750)** | <i class="fas fa-graduation-cap"></i> **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
+📚 **[INSPIRE HEP](https://inspirehep.net/authors/1067316)** | 🆔 **[ORCID](https://orcid.org/0000-0001-7834-8750)** | 🎓 **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
 
 ---
 

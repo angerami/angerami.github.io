@@ -81,29 +81,44 @@ Strong scientific writing and presentation skills; referee for JHEP, PLB and PRL
 
 * ATLAS Collaboration, *Deep Learning for Pion Identification and Energy Calibration with the ATLAS Detector*, ATL-PHYS-PUB-2020-018 (2020), [CDS Record](https://cds.cern.ch/record/2724632)
 
-### **Heavy-Ion Physics Results**
+### **Landmark Heavy-Ion Physics Results**
 * **ATLAS Collaboration, *Observation of a Centrality-Dependent Dijet Asymmetry in Lead–Lead Collisions at √sNN= 2.76 TeV with the ATLAS Detector at the LHC*, Phys. Rev. Lett. 105 (2010) 252303, [arXiv:1011.6182](https://arxiv.org/abs/1011.6182)** *(First jet measurement in heavy-ion collisions)*
 
 * ATLAS Collaboration, *Measurement of photonuclear jet production in ultra-peripheral Pb+Pb collisions at √sNN=5.02 TeV with the ATLAS detector*, Submitted to Phys. Rev. D. (2024), [arXiv:2409.11060](https://arxiv.org/abs/2409.11060)
 
 * ATLAS Collaboration, *Observation of Light-by-Light Scattering in Ultraperipheral Pb+Pb collisions with the ATLAS Detector*, Phys. Rev. Lett. 123 (2019) 052001, [arXiv:1904.03536](https://arxiv.org/abs/1904.03536)
 
-## Invited Talks
+## Recent Invited Talks
 *For complete presentation history, see the dedicated [Talks](/talks/) page.*
 
 ### **Major International Conferences**
-* *ATLAS Overview*, The XXVIII International Conference on Ultra-Relativistic Nucleus-Nucleus Collisions ("Quark Matter"), Houston, TX, September 2023
+* [*ATLAS Overview*](https://indico.cern.ch/event/1139644/contributions/5343931/), The XXVIII International Conference on Ultra-Relativistic Nucleus-Nucleus Collisions ("Quark Matter"), Houston, TX, September 2023
 
-* *Ultra-peripheral collisions*, The XXVII International Conference on Ultra-Relativistic Nucleus-Nucleus Collisions ("Quark Matter"), Venice, Italy, May 2018
+* [*Ultra-peripheral collisions*](https://indico.cern.ch/event/656452/contributions/2899707/), The XXVII International Conference on Ultra-Relativistic Nucleus-Nucleus Collisions ("Quark Matter"), Venice, Italy, May 2018
 
-* *ATLAS highlights*, The XXV International Conference on Ultra-Relativistic Nucleus-Nucleus Collisions ("Quark Matter"), Kobe, Japan, September 2015
+* [*ATLAS highlights*](https://indico.cern.ch/event/355454/contributions/838851/), The XXV International Conference on Ultra-Relativistic Nucleus-Nucleus Collisions ("Quark Matter"), Kobe, Japan, September 2015
 
-### **Specialized Workshops & Seminars**
+### **Recent Lectures & Seminars**
 * *Applications of AI and ML to Nuclear Physics*, Lectures at 2023 National Nuclear Physics Summer School, Riverside, CA, July 2023
 
-* *Machine Learning Approaches to Calorimetric Particle Reconstruction in High Energy Physics*, University of Washington, August 2022
+* *Machine Learning Approaches to Calorimetric Particle Reconstruction*, University of Washington, August 2022
+
+**Invited seminars at:** BNL (2013), [CERN](https://indico.cern.ch/event/295198/) (2014), Colorado (2016), Columbia (2013, 2016), LBNL (2018), LLNL (2017), Ohio (2020), Penn State (2018), SLAC (2014)
 
 ## Service and Leadership
 * Scientific coordinator for jet measurements within ATLAS heavy-ion physics program
 * Convener and organizer of international conference sessions on heavy-ion physics
 * Reviewer for major physics journals including Physical Review Letters, Journal of High Energy Physics
+
+## Technical Skills
+* **Programming**: Python, C++, ROOT, machine learning frameworks (TensorFlow, PyTorch)
+* **Statistical Analysis**: Advanced statistical methods, uncertainty quantification, Monte Carlo techniques
+* **Experimental Physics**: Large-scale detector systems, data acquisition, trigger systems
+* **Leadership**: International collaboration management, scientific project coordination
+
+## Complete Publication List
+[<img src="{{ site.baseurl }}/images/inspire-logo.png" alt="INSPIRE HEP" style="height: 20px; vertical-align: middle;">](https://inspirehep.net/authors/1067316) | 🆔 **[ORCID](https://orcid.org/0000-0001-7834-8750)** | 🎓 **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
+
+---
+
+**For complete publication and presentation lists, see the dedicated [Publications](/publications/) and [Talks](/talks/) pages.**
