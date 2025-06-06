@@ -50,15 +50,25 @@ author_profile: true
 [View complete speaking history →](/talks/)
 
 ---
+## Recognition & Media Coverage
 
-## Current Projects
+### Landmark Discovery Recognition
+**[*Observation of a Centrality-Dependent Dijet Asymmetry in Lead–Lead Collisions*](https://arxiv.org/abs/1011.6182)** - First direct observation of jet quenching:
 
-### Active Research
-* **Transformer-Spin Correspondence** - Developing mathematical connections between neural attention mechanisms and statistical physics
-* **AI-Optimized Detector Design** - Using machine learning to guide next-generation particle detector configurations
-* **Physics-Informed Machine Learning** - Applying domain knowledge to improve ML model performance and interpretability
+* **Physical Review Letters Cover Article** (December 2010) with accompanying [Physics Viewpoint](https://physics.aps.org/articles/v3/105) commentary
+* **CERN Press Release** - [*"LHC experiments bring new insight into primordial Universe"*](https://home.cern/news/press-release/cern/lhc-experiments-bring-new-insight-primordial-universe) highlighting ATLAS as "the first experiment to report direct observation of jet quenching"
+* **CERN Courier Feature** - [*"ATLAS observes striking imbalance of jet energies in heavy-ion collisions"*](https://cerncourier.com/a/atlas-observes-striking-imbalance-of-jet-energies-in-heavy-ion-collisions/)
 
-[View project portfolio →](/projects/)
+### Additional Research Recognition
+* **DOE Office of Science Highlight** - [*"When in a Plasma of Quarks and Gluons, Not All Jets Radiate Equally"*](https://www.osti.gov/biblio/1871234) featuring subsequent jet substructure research
+
+### Research Funding Recognition
+* **DOE Artificial Intelligence Research Initiative** - Principal Investigator on competitive grant ([$20 million program announcement](https://www.energy.gov/articles/department-energy-announces-20-million-artificial-intelligence-research)) supporting [AI-Assisted Detector Design](/projects/) research
+
+### Expert Commentary & Analysis
+* **ATLAS Collaboration Briefings** - Author of research summaries for public communication:
+  - [*"Quenching jets in hot, dense matter produced by colliding lead ions"*](https://atlas.cern/updates/briefing/quenching-jets-hot-dense-matter-produced-colliding-lead-ions)
+  - [*"Study the QGP using muon pairs"*](https://atlas.cern/updates/briefing/study-QGP-using-muon-pairs)
 
 ---
 
