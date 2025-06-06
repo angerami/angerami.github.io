@@ -106,7 +106,7 @@ Strong scientific writing and presentation skills; referee for JHEP, PLB and PRL
 **Invited seminars at:** BNL (2013), [CERN](https://indico.cern.ch/event/295198/) (2014), Colorado (2016), Columbia (2013, 2016), LBNL (2018), LLNL (2017), Ohio (2020), Penn State (2018), SLAC (2014)
 
 ## Service and Leadership
-* Scientific coordinator for jet measurements within ATLAS heavy-ion physics program
+* Scientific coordinator for ATLAS heavy-ion physics program
 * Convener and organizer of international conference sessions on heavy-ion physics
 * Reviewer for major physics journals including Physical Review Letters, Journal of High Energy Physics
 
@@ -117,7 +117,7 @@ Strong scientific writing and presentation skills; referee for JHEP, PLB and PRL
 * **Leadership**: International collaboration management, scientific project coordination
 
 ## Complete Publication List
-[<img src="{{ site.baseurl }}/images/inspire-logo.png" alt="INSPIRE HEP" style="height: 20px; vertical-align: middle;">](https://inspirehep.net/authors/1067316) | 🆔 **[ORCID](https://orcid.org/0000-0001-7834-8750)** | 🎓 **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
+**[Inspire](https://inspirehep.net/authors/1067316)** | 🆔 **[ORCID](https://orcid.org/0000-0001-7834-8750)** | 🎓 **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
 
 ---
 
