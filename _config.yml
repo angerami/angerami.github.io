@@ -20,6 +20,7 @@ site_theme               : "default"
 # Site Author
 author:
   name: "Aaron Angerami"
+  avatar: ""
   bio: "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
   location: "San Francisco Bay Area"
   email: "aaron.angerami@gmail.com"
