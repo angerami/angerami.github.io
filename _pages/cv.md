@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "CV"
-permalink: /cv/
+permalink: /cv/ 
 author_profile: true
 redirect_from:
   - /resume
@@ -115,10 +115,11 @@ Strong scientific writing and presentation skills; referee for JHEP, PLB and PRL
 * **Statistical Analysis**: Advanced statistical methods, uncertainty quantification, Monte Carlo techniques
 * **Experimental Physics**: Large-scale detector systems, data acquisition, trigger systems
 * **Leadership**: International collaboration management, scientific project coordination
+## Doctoral Thesis
+**Jet Quenching in Relativistic Heavy Ion Collisions at the LHC**  
+*Columbia University, 2012*
 
-## Complete Publication List
-**[Inspire](https://inspirehep.net/authors/1067316)** | 🆔 **[ORCID](https://orcid.org/0000-0001-7834-8750)** | 🎓 **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
-
----
-
-**For complete publication and presentation lists, see the dedicated [Publications](/publications/) and [Talks](/talks/) pages.**
+* **ATLAS Thesis Award** - Recognizing outstanding contributions to ATLAS in the context of Ph.D. research
+* **Springer Thesis Award** - Selected for publication via [Springer Theses](https://link.springer.com/book/10.1007/978-3-319-01219-3)
+* Manuscript available on 
+[arXiv](https://arxiv.org/abs/1208.5043) and CDS

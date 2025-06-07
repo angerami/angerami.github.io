@@ -7,9 +7,14 @@ author_profile: true
 
 {% include base_path %}
 
-## Complete Publication List
-📚 **[INSPIRE HEP](https://inspirehep.net/authors/1067316)** | 🆔 **[ORCID](https://orcid.org/0000-0001-7834-8750)** | 🎓 **[Google Scholar](https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en)**
+--- 
+*The following is a selection of my publication record. For the complete list please see:*
 
+<div class="citation-links">
+  <a href="https://inspirehep.net/authors/1067316">📚 <strong>INSPIRE HEP</strong></a>
+  <a href="https://orcid.org/0000-0001-7834-8750">🆔 <strong>ORCID</strong></a>
+  <a href="https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en">🎓 <strong>Google Scholar</strong></a>
+</div>
 ---
 
 ## Machine Learning Applications

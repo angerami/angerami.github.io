@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-*My research spans experimental particle physics, machine learning applications, and the intersection of statistical physics with artificial intelligence. This work demonstrates how fundamental physics insights can drive innovations in AI, while advanced computational methods open new frontiers in experimental physics.*
+*My research spans nuclear and particle physics, machine learning applications, and the intersection of  physics with artificial intelligence. This work demonstrates how fundamental physics insights can drive innovations in AI, while advanced computational methods open new frontiers in experimental physics.*
 
 ---
 
@@ -24,7 +24,7 @@ Using deep learning as a new tool to guide the design of detectors for collider 
 - Established optimization framework for future detector systems
 - Demonstrated 50% improvement in particle identification accuracy
 
-**Skills:** Machine Learning · Deep Learning · Generative AI Tools · Experimental Physics · Data Analysis
+**Skills:** <span class="skill-tag">Machine Learning</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Generative AI Tools</span><span class="skill-tag">Experimental Physics</span><span class="skill-tag">Data Analysis</span>
 
 **Publications:**
 - [Design of a SiPM-on-Tile ZDC for the future EIC and its Performance with Graph Neural Networks](https://arxiv.org/abs/2406.12877)
@@ -42,7 +42,7 @@ We utilized deep learning methods to improve particle identification and reconst
 - 10x reduction in false positive rate while maintaining >95% recall
 - Demonstrated superiority of graph neural networks for particle reconstruction
 
-**Skills:** Experimental Physics · Data Analysis · Machine Learning
+**Skills:** <span class="skill-tag">Experimental Physics</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Machine Learning</span>
 
 **Code Repositories:**
 - [GitHub - atlas-calo-ml/MLTree](https://github.com/atlas-calo-ml/MLTree)
@@ -63,7 +63,7 @@ We utilized deep learning methods to improve particle identification and reconst
 
 This project explored fundamental questions about how jets interact with the quark-gluon plasma, providing new insights into the substructure dependence of energy loss mechanisms.
 
-**Skills:** Experimental Physics · Data Analysis · Research Projects · Analytical Skills · Uncertainty Quantification
+**Skills:** <span class="skill-tag">Experimental Physics</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Research Projects</span><span class="skill-tag">Analytical Skills</span><span class="skill-tag">Uncertainty Quantification</span>
 
 **Publications:**
 - [Measurement of substructure-dependent jet suppression in Pb+Pb collisions at 5.02 TeV with the ATLAS detector](https://arxiv.org/abs/2211.11470)
@@ -76,7 +76,7 @@ This project explored fundamental questions about how jets interact with the qua
 
 Advanced studies of ultra-peripheral heavy-ion collisions, exploring photonuclear processes and novel QCD phenomena in extreme electromagnetic field environments.
 
-**Skills:** Experimental Physics · Data Analysis · Analytical Skills · Uncertainty Quantification · Monte Carlo Simulation · High Performance Computing (HPC)
+**Skills:** <span class="skill-tag">Experimental Physics</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Analytical Skills</span><span class="skill-tag">Uncertainty Quantification</span><span class="skill-tag">Monte Carlo Simulation</span><span class="skill-tag">High Performance Computing</span>
 
 **Publications:**
 - [Measurement of photonuclear jet production in ultra-peripheral Pb+Pb collisions](https://arxiv.org/abs/2409.11060)
@@ -89,7 +89,7 @@ Advanced studies of ultra-peripheral heavy-ion collisions, exploring photonuclea
 
 In the first Pb+Pb collisions at the LHC, the ATLAS experiment observed highly imbalanced dijet pairs, providing the first direct evidence of jet quenching in the quark-gluon plasma at unprecedented energies.
 
-**Skills:** Experimental Physics · Data Analysis · Analytical Skills
+**Skills:** <span class="skill-tag">Independent Research</span><span class="skill-tag">Data Analysis</span>
 
 **Publications:**
 - **[Observation of a Centrality-Dependent Dijet Asymmetry in Lead-Lead Collisions](https://arxiv.org/abs/1011.6182)** *(First jet measurement in heavy-ion collisions - field-defining result)*
@@ -99,7 +99,7 @@ In the first Pb+Pb collisions at the LHC, the ATLAS experiment observed highly i
 
 Systematic studies of jet suppression phenomena, establishing quantitative frameworks for understanding energy loss in the quark-gluon plasma.
 
-**Skills:** Experimental Physics · Data Analysis · Uncertainty Quantification · Monte Carlo Simulation · Analytical Skills
+**Skills:** <span class="skill-tag">Experimental Physics</span><span class="skill-tag">Data Analysis</span><span class="skill-tag">Uncertainty Quantification</span><span class="skill-tag">Monte Carlo Simulation</span><span class="skill-tag">Analytical Skills</span>
 
 **Publications:**
 - [Measurement of jet pT correlations in Pb+Pb and pp collisions](https://arxiv.org/abs/1706.09363)
@@ -107,14 +107,3 @@ Systematic studies of jet suppression phenomena, establishing quantitative frame
 - [Jet size dependence of single jet suppression in lead-lead collisions](https://arxiv.org/abs/1208.1967)
 
 ---
-
-## Research Philosophy
-
-My approach to research bridges fundamental physics with cutting-edge computational methods. Whether developing AI systems for detector optimization or probing the fundamental nature of matter in extreme conditions, I focus on:
-
-- **Cross-disciplinary innovation:** Applying physics insights to advance AI, and leveraging AI to solve physics problems
-- **Quantitative rigor:** Establishing precise measurement techniques and uncertainty quantification methods
-- **Technical leadership:** Coordinating large-scale collaborative efforts to achieve breakthrough results
-- **Practical impact:** Developing tools and methods that advance both scientific understanding and technological capabilities
-
-This research portfolio demonstrates how fundamental physics research naturally evolves into AI innovation, creating new possibilities at the intersection of these fields.

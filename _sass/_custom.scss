@@ -1,0 +1,64 @@
+.skill-tag {
+  display: inline-block;
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 6px 12px;
+  margin: 3px 6px 3px 0;
+  border-radius: 20px;        // This makes them pill-shaped
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  background-color: #d1d5db;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+// Dark theme support
+html[data-theme="dark"] .skill-tag {
+  background-color: #4b5563;
+  color: #e5e7eb;
+  border-color: #6b7280;
+}
+
+html[data-theme="dark"] .skill-tag:hover {
+  background-color: #6b7280;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #374151;
+  margin: 2rem 0;
+}
+
+.citation-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.citation-links a {
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .citation-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.author__urls a {
+  font-size: 1.1em !important;  // About 10% larger
+}
