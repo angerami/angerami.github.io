@@ -1,11 +1,14 @@
 ---
 layout: archive
-title: "Projects"
+title: "Physics to AI Research Scientist"
+excerpt: "Research scientist applying experimental physics methodology to AI"
 permalink: /projects/
 author_profile: true
 ---
 
 {% include base_path %}
+
+# Projects
 
 *My research spans nuclear and particle physics, machine learning applications, and the intersection of  physics with artificial intelligence. This work demonstrates how fundamental physics insights can drive innovations in AI, while advanced computational methods open new frontiers in experimental physics.*
 

@@ -62,3 +62,14 @@ hr {
 .author__urls a {
   font-size: 1.1em !important;  // About 10% larger
 }
+// Hide page title on homepage only
+.page__title {
+  display: none;
+}
+
+// Or if you want to be more specific to just the homepage:
+.page--about .page__title {
+  display: none;
+}
+
+//

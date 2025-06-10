@@ -1,12 +1,14 @@
 ---
 layout: archive
-title: "CV"
+title: "Physics to AI Research Scientist"
+excerpt: "Research scientist applying experimental physics methodology to AI"
 permalink: /cv/ 
 author_profile: true
 redirect_from:
   - /resume
 ---
 
+# Curriculum Vitae 
 {% include base_path %}
 
 *I am a scientist with 12+ years experience applying quantitative methods to solve challenging research problems in physics and national security. I have 7+ years experience in technical leadership roles and as a principal investigator leading my own research team, with an established record of high-impact publications, presentations at major international conferences and novel applications of machine learning to physics problems.*

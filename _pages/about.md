@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "Aaron Angerami"
-excerpt: "About me"
+title: "Physics to AI Research Scientist"
+excerpt: "Research scientist applying experimental physics methodology to AI."
 author_profile: true
 keywords: Aaron Angerami, physicist, AI researcher, machine learning, CERN, ATLAS, nuclear physics, particle physics
 description: "Research scientist applying experimental physics methodology to AI"
@@ -9,6 +9,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
+## About Me
 
 I am a research scientist deploying my background and experience as a physicist to problems in artificial intelligence. 
 My activities focuses on apply the experimental and inferential methodologies we use to make fundamental statements about nature to modern AI architectures.

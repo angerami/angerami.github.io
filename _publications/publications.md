@@ -6,8 +6,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-
---- 
+# Publications
 *The following is a selection of my publication record. For the complete list please see:*
 
 <div class="citation-links">
@@ -16,7 +15,6 @@ author_profile: true
   <a href="https://scholar.google.com/citations?user=8EqJb6kAAAAJ&hl=en">🎓 <strong>Google Scholar</strong></a>
 </div>
 ---
-
 ## Machine Learning Applications
 
 [R. Milton et al., *Design of a SiPM-on-Tile ZDC for the future EIC and its Performance with Graph Neural Networks*, Submitted to JINST (2024), arXiv:2406.12877 [physics.ins-det]](https://arxiv.org/abs/2406.12877).

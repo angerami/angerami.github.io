@@ -1,10 +1,11 @@
 ---
 layout: archive
-title: "Talks & Presentations"
-permalink: /talks/
+title: "Physics to AI Research Scientist"
+excerpt: "Research scientist applying experimental physics methodology to AI"
+permalink: /presentations/
 author_profile: true
 ---
-
+# Presentations
 {% include base_path %}
 
 *A comprehensive record of invited talks, conference presentations, and seminars.*

@@ -1,12 +1,13 @@
 # Welcome to Jekyll!
 #
+#
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 # Basic Site Settings
-title                    : "Aaron Angerami - Physics to AI Research Scientist"
+title                    : "Aaron Angerami"
 email                    : "aaron.angerami@gmail.com"
 description              : "Research scientist applying experimental physics methodology to AI"
 url                      : "https://angerami.github.io"
@@ -18,10 +19,11 @@ site_theme               : "default"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 # Site Author
+
 author:
   name: "Aaron Angerami"
   avatar: false
-  bio: "Research scientist applying experimental physics methodology to AI"
+  bio: "Research scientist"
   location: "San Francisco Bay Area"
   email: "aaron.angerami@gmail.com"
   github: angerami
@@ -34,7 +36,7 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'   
   conferences:
     title: 'Conference Papers'
 
