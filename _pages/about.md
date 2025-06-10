@@ -1,8 +1,10 @@
 ---
 permalink: /
-title: "About"
+title: "Aaron Angerami"
 excerpt: "About me"
 author_profile: true
+keywords: Aaron Angerami, physicist, AI researcher, machine learning, CERN, ATLAS, nuclear physics, particle physics
+description: "Research scientist applying experimental physics methodology to AI"
 redirect_from: 
   - /about/
   - /about.html

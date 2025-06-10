@@ -6,9 +6,9 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 # Basic Site Settings
-title                    : ""
+title                    : "Aaron Angerami - Physics to AI Research Scientist"
 email                    : "aaron.angerami@gmail.com"
-description              : "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
+description              : "Research scientist applying experimental physics methodology to AI"
 url                      : "https://angerami.github.io"
 repository               : "angerami/angerami.github.io"
 locale                   : "en-US"
@@ -21,7 +21,7 @@ site_theme               : "default"
 author:
   name: "Aaron Angerami"
   avatar: false
-  bio: "Research scientist deploying physics to unlock the mysteries of artificial intelligence"
+  bio: "Research scientist applying experimental physics methodology to AI"
   location: "San Francisco Bay Area"
   email: "aaron.angerami@gmail.com"
   github: angerami
