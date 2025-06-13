@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Physics to AI Research Scientist"
+title: "CV • "
 excerpt: "Research scientist applying experimental physics methodology to AI"
 permalink: /cv/ 
 author_profile: true

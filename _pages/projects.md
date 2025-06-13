@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Physics to AI Research Scientist"
+title: "Projects • "
 excerpt: "Research scientist applying experimental physics methodology to AI"
 permalink: /projects/
 author_profile: true
