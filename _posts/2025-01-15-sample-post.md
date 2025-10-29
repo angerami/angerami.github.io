@@ -6,7 +6,13 @@ tags:
   - transformers
   - statistical-physics
 published: true
+draft: true
 ---
+
+<div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; margin-bottom: 20px;">
+<strong>⚠️ Work in Progress</strong> - This post is still being developed and may contain incomplete sections or change substantially.
+</div>
+
 ## Transformer Basics
 ### Sequence Transduction and Terminology
 
