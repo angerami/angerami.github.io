@@ -23,4 +23,10 @@ $$
 i\hbar\frac{\partial}{\partial t}\Psi(x,t) = \hat{H}\Psi(x,t)
 $$
 
-That's it for now.
+Test macro: A vector space over $\RR$ has dimension $n$.
+
+Attention: $\attn(\QQ, \KK, \VV) = \softmax\left(\frac{\QQ\KK^T}{\sqrt{\dk}}\right)\VV$
+
+Query vectors $\vv{q}_i \in \RR^{\dmodel}$ with $\EE[x] = \mu$. rt3
+
+That's it for now. 
