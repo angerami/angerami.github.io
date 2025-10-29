@@ -32,14 +32,17 @@
   WQ: "\\mathbf{W}_Q",
   WK: "\\mathbf{W}_K",
   WV: "\\mathbf{W}_V",
-  WO: "\\mathbf{W}_O",
+  WQK: "\\mathbf{W}_{QK}",
+  WOV: "\\mathbf{W}_{OV}",
   
   // Dimensions
-  dmodel: "d_{\\text{model}}",
+  //dmodel: "d_{\\text{model}}",
+  dmodel: "d",
   dff: "d_{\\text{ff}}",
   dk: "d_k",
   dv: "d_v",
-  
+  Nseq: "N_{\\text{seq}}",
+  Nvocab: "N_{\\text{vocab}}",
   // Physics
   Ham: "\\mathcal{H}",
   Lag: "\\mathcal{L}",
