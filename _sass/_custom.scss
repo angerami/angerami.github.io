@@ -62,6 +62,7 @@ hr {
 .author__urls a {
   font-size: 1.1em !important;  // About 10% larger
 }
+
 // Hide page title on homepage only
 .page__title {
   display: none;
@@ -72,4 +73,64 @@ hr {
   display: none;
 }
 
-//
+/* Series preamble styling for blog posts */
+.series-preamble {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0066cc;
+  padding: 1.5em;
+  margin: 2em 0;
+  border-radius: 4px;
+}
+
+.series-preamble h3 {
+  margin-top: 0;
+  color: #0066cc;
+  font-size: 1.1em;
+}
+
+.series-preamble p:first-of-type {
+  font-weight: 500;
+}
+
+.series-preamble ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.series-preamble a {
+  color: #0066cc;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s;
+}
+
+.series-preamble a:hover {
+  border-bottom-color: #0066cc;
+}
+
+/* Dark theme adjustments for series preamble */
+html[data-theme="dark"] .series-preamble {
+  background-color: #1a1a1a;
+  border-left-color: #4d9fff;
+}
+
+html[data-theme="dark"] .series-preamble h3,
+html[data-theme="dark"] .series-preamble a {
+  color: #4d9fff;
+}
+
+html[data-theme="dark"] .series-preamble a:hover {
+  border-bottom-color: #4d9fff;
+}
+.wip-notice {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+html[data-theme="dark"] .wip-notice {
+  background-color: #664d03;
+  border-left-color: #ffca2c;
+  color: #ffecb5;
+}

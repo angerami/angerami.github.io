@@ -9,3 +9,5 @@ main:
     url: /presentations/
   - title: "Projects"
     url: /projects/
+  - title: "Writing"
+    url: /posts/

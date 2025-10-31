@@ -1,0 +1,19 @@
+{% if page.series == "transformer-spin" %}
+<div class="series-preamble" markdown="1">
+
+---
+
+**Series Context:** This post is part of [The Transformer-Spin Correspondence](/posts/transformer-spin/) series, which explores the deep mathematical connections between transformer neural networks and spin glass systems from statistical physics. These posts reveal how concepts from condensed matter physics—energy landscapes, phase transitions, and emergent phenomena—illuminate the inner workings of large language models.
+
+{% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
+**Other posts in this series:**
+{% for post in series_posts %}
+  {% if post.url != page.url %}
+- Part {{ post.series_order }}: [{{ post.title }}]({{ post.url }})
+  {% endif %}
+{% endfor %}
+
+---
+
+</div>
+{% endif %}

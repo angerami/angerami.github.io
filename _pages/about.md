@@ -25,11 +25,11 @@ My most impactful contribution was leading the [observation of centrality-depend
 
 Having checked off most of my bucket list in experimental physics, I am now eager to apply these analytical abilities and leadership experience to new domains, especially at the interface between technology and humanity. I've discovered fascinating connections between the mathematical frameworks that describe physical systems and those underlying artificial intelligence.
 
-My current research explores what I call the "Transformer-Spin Correspondence"—the remarkable similarity between transformer neural networks and spin glass systems from statistical physics. This perspective opens new avenues for understanding why large language models work so effectively and suggests physics-inspired approaches for improving AI architectures.
+My current research explores what I call the "Transformer-Spin Correspondence", the remarkable similarity between transformer neural networks and spin glass systems from statistical physics. This perspective opens new avenues for understanding why large language models work so effectively and suggests physics-inspired approaches for improving AI architectures.
 
 ## Personal Motivation
 
-The spark igniting interest in artificial intelligence came from an unexpected source: becoming a father. Watching my children's neurological development from early stages revealed the staggering complexity required to build a human mind. When we study adult learning, we're examining sophisticated processes running on mature neural hardware. But witnessing intelligence emerge from scratch—watching a brain bootstrap itself into consciousness—illuminated that understanding learning isn't just academic curiosity. It's essential for navigating the profound questions at the intersection of artificial and human intelligence.
+The spark igniting interest in artificial intelligence came from an unexpected source: becoming a father. Watching my children's neurological development from early stages revealed the staggering complexity required to build a human mind. When we study adult learning, we're examining sophisticated processes running on mature neural hardware. But witnessing intelligence emerge from scratch revealed to me that understanding the process of learning isn't just academic curiosity; it's essential for navigating the profound questions at the intersection of artificial and human intelligence.
 
 ---
 
