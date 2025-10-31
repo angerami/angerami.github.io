@@ -23,7 +23,7 @@ My most impactful contribution was leading the [observation of centrality-depend
 
 ## Current Focus: Physics Meets AI
 
-Having checked off most of my bucket list in experimental physics, I am now eager to apply these analytical abilities and leadership experience to new domains, especially at the interface between technology and humanity. I've discovered fascinating connections between the mathematical frameworks that describe physical systems and those underlying artificial intelligence.
+Having checked off most of my bucket list in experimental physics, I am now eager to apply these analytical abilities and leadership experience to new domains, especially at the interface between technology and humanity. I've found fascinating connections between the mathematical frameworks that describe physical systems and those underlying artificial intelligence.
 
 My current research explores what I call the "Transformer-Spin Correspondence", the remarkable similarity between transformer neural networks and spin glass systems from statistical physics. This perspective opens new avenues for understanding why large language models work so effectively and suggests physics-inspired approaches for improving AI architectures.
 

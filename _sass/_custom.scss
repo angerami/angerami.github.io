@@ -134,3 +134,16 @@ html[data-theme="dark"] .wip-notice {
   border-left-color: #ffca2c;
   color: #ffecb5;
 }
+
+.ile-notice {
+  background-color: #e8f4f8;
+  border-left: 4px solid #0288d1;
+  padding: 1.5em;
+  margin: 2em 0;
+  border-radius: 4px;
+}
+
+html[data-theme="dark"] .ile-notice {
+  background-color: #0d2a35;
+  border-left-color: #4fc3f7;
+}

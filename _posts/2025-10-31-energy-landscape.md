@@ -10,6 +10,7 @@ tags:
   - statistical-physics
 published: true
 draft: true
+show_ile_notice: true
 ---
 
 <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; margin-bottom: 20px;">

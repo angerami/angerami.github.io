@@ -3,7 +3,9 @@
 
 ---
 
-**Series Context:** This post is part of [The Transformer-Spin Correspondence](/posts/transformer-spin/) series, which explores the deep mathematical connections between transformer neural networks and spin glass systems from statistical physics. These posts reveal how concepts from condensed matter physics—energy landscapes, phase transitions, and emergent phenomena—illuminate the inner workings of large language models.
+**Series Context:** This post is part of [The Transformer-Spin Correspondence](/posts/transformer-spin/) series, which explores the deep mathematical connections between transformer neural networks and spin glass systems from statistical physics.
+
+**Interactive Learning Environments:** Throughout this series, I'll provide companion files (structured markdown documents) you can upload to AI assistants for guided exploration of the mathematics and physics. These environments contain derivations, worked examples, and exploration prompts that extend beyond what fits in a post. By loading such an environment into an AI assistant like Claude, you can get step-by-step derivations, track down missing factors of √π, or explore new manipulations and connections.
 
 {% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
 **Other posts in this series:**
@@ -16,4 +18,11 @@
 ---
 
 </div>
+
+{% if page.show_ile_notice %}
+<div class="ile-notice" markdown="1">
+
+
+</div>
+{% endif %}
 {% endif %}
