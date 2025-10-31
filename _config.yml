@@ -309,4 +309,9 @@ compress_html:
   ignore:
     envs: development
 
- 
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-872JJNQ6PP"
+    anonymize_ip: false 
