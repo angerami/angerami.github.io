@@ -23,7 +23,7 @@ site_theme               : "default"
 
 author:
   name: "Aaron Angerami"
-  avatar: false
+  avatar: "avatar.png" #to remove completely set to false
   bio: "Research scientist with a background in nuclear and particle physics"
   location: "San Francisco Bay Area"
   email: "aaron.angerami@gmail.com"
