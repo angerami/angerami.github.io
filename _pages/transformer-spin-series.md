@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Transformer-Spin Correspondence"
-permalink: /posts/transformer-spin
+permalink: /posts/transformer-spin/
 author_profile: true
 ---
 
