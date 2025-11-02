@@ -58,13 +58,13 @@ MathJax = {
       WOV: "\\mathbf{W}_{OV}",
       
       // Dimensions
-      //dmodel: "d_{\\text{model}}",
       dmodel: "d",
       dff: "d_{\\text{ff}}",
       dk: "d_k",
       dv: "d_v",
       Nseq: "N_{\\text{seq}}",
       Nvocab: "N_{\\text{vocab}}",
+      
       // Physics
       Ham: "\\mathcal{H}",
       Lag: "\\mathcal{L}",
@@ -93,20 +93,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
-{% include base_path %}
-<!-- start custom head snippets -->
 
-<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
-<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
-<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
-<link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="/images/favicon.ico"/>
-<meta name="theme-color" content="#ffffff"/>
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
-
-<!-- ADD YOUR SEO META TAGS HERE -->
+<!-- SEO META TAGS -->
 <meta name="robots" content="index, follow">
 <meta name="author" content="Aaron Angerami">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -124,4 +112,5 @@ MathJax = {
   "url": "https://angerami.github.io"
 }
 </script>
+
 <!-- end custom head snippets -->
