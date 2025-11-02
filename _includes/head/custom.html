@@ -14,7 +14,7 @@
 
 <!-- MathJax for LaTeX rendering -->
 <script>
-MathJax = {
+window.MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$', '$$'], ['\\[', '\\]']],
@@ -86,9 +86,6 @@ MathJax = {
       relu: "\\operatorname{ReLU}",
       gelu: "\\operatorname{GELU}"
     }
-  },
-  options: {
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
   }
 };
 </script>
