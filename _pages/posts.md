@@ -9,14 +9,14 @@ author_profile: true
 
 *Technical explorations at the intersection of physics and artificial intelligence*
 
----
+<!-- ---
 
 # Series
 
 ## [The Transformer-Spin Correspondence](/posts/transformer-spin/)
 Exploring the deep mathematical connections between transformer neural networks and spin glass systems from statistical physics. This series reveals how concepts from statistical physics illuminate the inner workings of large language models.
 
----
+--- -->
 
 # Recent Posts
 

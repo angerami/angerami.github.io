@@ -8,7 +8,7 @@ permalink: /posts/2025/physics-of-transformers/
 tags:
   - transformers
   - statistical-physics
-published: true
+published: false
 draft: true
 ---
 

@@ -13,8 +13,58 @@ author_profile: true
 *My research spans nuclear and particle physics, machine learning applications, and the intersection of  physics with artificial intelligence. This work demonstrates how fundamental physics insights can drive innovations in AI, while advanced computational methods open new frontiers in experimental physics.*
 
 ---
+# Generative AI: Research and Applied Projects
+## The Physics of Transformers
+**2024 - Present**  
+*Independent Research*
 
-## Machine Learning & AI Applications
+This project treats transformer weights as a dynamical system, developing a statistical analysis pipeline that extracts interpretable metrics to track training evolution. The framework applies singular value decomposition, entropy, and KL divergence to characterize how attention mechanism weights evolve, revealing structure in the optimization process.
+The analysis spans multiple architectures (GPT-2, LLaMA, Mistral) and scales (70M to 12B parameters), with temporal analysis across 154 Pythia training checkpoints. Within individual models, different layers and attention heads exhibit distinct patterns of behavior—and for Pythia, plotting singular values against training step reveals particle-like trajectories as modes emerge and stabilize during optimization. The work produces open-source code, HuggingFace datasets, and interactive visualization dashboards.
+
+**Resources:**
+<!-- - 📝 [Read the theory post](/posts/transformer-spin) *(coming soon)* -->
+- 📝 [Read the post](/posts/2026/transformer-analysis) 
+- 💻 [Code repository](https://github.com/angerami/transformer-analysis)
+- 🎮 [Interactive explorer](https://huggingface.co/spaces/angerami/transformer-weights)
+
+
+## Generative Modeling of Grateful Dead Setlists
+**2025 - Present**  
+*Independent Research*
+
+This project builds generative models of concert setlists using supervised fine-tuning with GPT-2, treating the Grateful Dead's 30-year performance history as a natural language corpus. Each setlist becomes a sequence and each song a token, yielding a vocabulary of approximately 417 unique songs. Much like natural language, setlists exhibit patterns like opener conventions, set-closing sequences, and thematic pairings that experienced listeners recognize intuitively but that emerge statistically from the data.
+The data pipeline initially processed Archive.org's 17,000+ concert recordings, providing an opportunity to develop fuzzy matching and vocabulary canonicalization techniques for messy real-world data. Production training uses cleaned data from setlist.fm for reliability. The availability of original recordings on Archive.org offers a compelling path to extend this work into audio modality, connecting setlist structure to the musical content itself.
+
+**Resources:**
+- 💻 [Code repository](https://github.com/angerami/dead-setlist)
+<!-- - 📝 [Read the post](/posts/dead-setlist) *(coming soon)* 
+- 🎮 [Demo](https://huggingface.co/spaces/angerami/XXX) -->
+
+**Skills:** 
+<span class="skill-tag">SFT</span>
+<span class="skill-tag">NLP</span>
+<span class="skill-tag">Gen AI</span>
+<span class="skill-tag">LLM</span>
+
+## Generative Modeling of Baseball Game States
+**2025 - Present**  
+*Independent Research*
+
+This project applies transformer language models to sequential game state prediction, treating baseball games as sequences of discrete state transitions. The system processes 3.3 million pitch sequences from MLB's Statcast (2015–present) and Retrosheet's historical archives (1871–present), converting games into tokenized sequences for language model training.
+The research addresses a question in mechanistic interpretability: how do traditional baseball statistics emerge as learned properties from underlying game dynamics? The evaluation framework assesses not just prediction accuracy but whether models learn actual baseball rules—detecting illegal transitions that violate game constraints. State representations range from simple 24-state models encoding outs and baserunners to complex 57,000-state encodings that capture detailed game context.
+
+**Resources:**
+- 💻 [Code repository](https://github.com/angerami/baseball-states)
+
+**Skills:** 
+<span class="skill-tag">Pretraining</span>
+<span class="skill-tag">NLP</span>
+<span class="skill-tag">Gen AI</span>
+<span class="skill-tag">LLM</span>
+
+---
+
+## Machine Learning & AI Applications in Physics
 
 ### AI-Informed Detector Design
 **Jan 2021 - Jan 2024**  
