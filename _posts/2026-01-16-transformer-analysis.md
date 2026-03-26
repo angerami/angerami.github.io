@@ -16,15 +16,16 @@ draft: true
 </div>
 
 ## Introduction
-I've been interested in applying a physics framework to transformers
+I've been interested in applying a physics framework to transformers involving dynamical systems and statistical mechanics. In this approach the feature vectors representing tokens are interpreted as spins, the model weights play the role of interaction strengths between different token vectors, and the application of the self-attention mechanism results maps on to a thermodynamic average of the effects of these interactions on the tokens. The structure of these interactions allows for a large number of distinct, metastable equilibrium configurations, a spin glass system. Through innovations like multi-headed attention, multiple transformer layers, and resdiual stream-like connections,
 
-You can learn more about that here. Link to series landing page
+In particular in the self attention mechanism 
 
-In that approach we view each attention head as as kind of dynamical system of interacting tokens. In particular in the self attention mechanism 
 $$
 \vec{Q}_{i}^{T} \cdot \vec{K_j} = \vec{x_i}^{T} W_{Q}^{T}W_{K}\vec{x_{j}}
 $$
-which looks like the energy for the interaction of two vectors (spins) via a matrix
+
+looks like the energy for the interaction of two vectors (spins) via a matrix
+
 $$
 W_{QK} = W_{Q}^{T}W_{K}
 $$
@@ -104,6 +105,19 @@ To study the time dependence I used the `Pythia` collection of datasets. This co
 ** Link to streamlit space for full exporation**
 ### Time-independent study
 
+To establish some expectations we first look at these distributions for a well-known model like gpt-2. Here we consider the "small" version of the model with 124M parameters. The model dimension (the dimensionality of the spin vectors) is 768, while the model has 12 layers each with 12 attention heads. This means the $W_{Q}$ and $W_{K}$ matrices contain $768*768/12 \sim 50,000$ entries. 
+Shown here is a histogram of the weights distribution for the 12 attention heads in layer 0. Each of these can be thought of as a separate system of $\sim 50,000$ degrees of freedom. At initialization time, all of the heads are initialized to the same distribution $N(0,\sigma)$, but as you can see they evolve differently during training. The next figure shows the same quantities but on a logarithmic vertical scale and including a fit of the distribution to $N(0,\sigma)$ for reference. Not only to the distributions have different $\sigma$ values, but the show different levels of deviations from normality. 
+
+To summarize the entire model, these distributions are shown for all shown grouped by attention head within each layer; note the logarithmic color scale. The distributions generally get narrower as one goes deeper in the network. While different heads in the same layer tend to be similar, the figure shows a few case where particular heads show very different behavior than these general trends. 
+
+The next figure shows two summary statistics: the statistical standard deviation of the sample, and the entropy (specifically $\langle \ln P \rangle $ using a KDE estimate of the density), which confirm the behavior we observed above. The distributions qualitatively narrow, but there are are large variations among heads within the same layer that are of a similar scale as the overall downward trend.
+
+The same analysis for gpt2-xl (1600, 25, 48) is shown in the next figure. Note that in addition to having more layers and heads, the model dimension has increased from 768 to 1600, this 2x increase results in a 4x increase in the number of matrix elements, and thus the statistics are evaluated using a sample that is 4x times larger. Generally sampling fluctuations on statistical estimators should be smaller by 2x and the whole picture should look smoother. While this model exhibits some of the same trends, there is clearly a resurgence in the layer layers of the model. 
+
+### Comparison across models
+
+### Singular value decomposition
+For this next section we focus on the Pythia models. 
 
 
 ### Time-dependent study
