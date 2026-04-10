@@ -61,7 +61,21 @@ Varying $d_h$ while keeping $\sigma$ = 1 reveals the expected behavior: as the r
 
 <p class="fig-caption">Figure 3: Effect of varying $d_h$ at fixed $d$ = 1000 and $\sigma$ = 1. Left: element-wise distributions narrow as $1/\sqrt{n_h}$. Center: singular values with cutoff at $d_h$. Right: spectral density transitions from gapped (low rank) to continuous (full rank).</p>
 
-These baselines establish what we should expect from random, untrained weight matrices. Deviations from these predictions in trained models are the signal of learned structure.
+These baselines establish what we should expect from the spectral structure of random, untrained weight matrices.
+
+### Entropy and KL Divergence of Random $W_{QK}$
+
+The element-wise distribution of $W_{QK} = W_Q^T W_K$ is not Gaussian by construction: each element is a sum of $d_h$ products of Gaussian random variables. However, at the matrix sizes relevant to transformer architectures, the central limit theorem drives the element-wise distribution very close to Gaussian. This can be verified empirically without deriving the exact distribution.
+
+Figure 4 shows the standard deviation and differential entropy of random $W_{QK}$ matrices as a function of $d_h$ at fixed $d$ = 1000 with $\sigma$ = 1. The left panel confirms that $\sigma_{W_{QK}} = \sqrt{d_h/d}$ and that the entropy follows $S = \frac{1}{2}\ln(2\pi e\, d_h/d)$, which is just the Gaussian entropy evaluated at that $\sigma$. The right panel shows the KL divergence $D_{\text{KL}}(P_{W_{QK}} \| \mathcal{N}(0,\sigma))$, where $\sigma$ is the measured standard deviation of the same matrix. This quantity is identically zero for a Gaussian and measures the total departure from normality. Across the full range of $d_h$, the KL divergence remains at the $10^{-3}$ level, a fraction of a percent of the typical entropy $S \sim \mathcal{O}(1)$, confirming that the element-wise distribution is effectively Gaussian regardless of the rank.
+
+![Figure 4: Entropy and KL divergence of random W_QK](/images/transformer-analysis/random_matrix_entropy_kl.png)
+
+<p class="fig-caption">Figure 4: Properties of random $W_{QK}$ matrices vs. head dimension $d_h$ at $d$ = 1000. Left: standard deviation and entropy, with analytic Gaussian predictions (dashed). Right: $D_{\text{KL}}(P_{W_{QK}} \| \mathcal{N}(0,\sigma))$, confirming near-zero departure from Gaussianity across all ranks.</p>
+
+This result has a practical consequence: when comparing trained weight distributions to a Gaussian baseline, we do not need to account for the low-rank product structure of $W_{QK}$. The Gaussian with the same $\sigma$ is the correct reference for both $W_Q$ and $W_{QK}$, and any departure from it in trained models can be attributed to learning rather than to the matrix product structure. Note also that $\Delta S = -D_{\text{KL}}(P \| \mathcal{N}(0,\sigma))$ when the distribution has zero mean and variance $\sigma^2$, so the entropy residual and KL divergence are the same quantity up to a sign.
+
+A notebook ([low_rank_SVD_systematics.ipynb](https://github.com/angerami/transformer-analysis/blob/main/notebooks/low_rank_SVD_systematics.ipynb)) is available with further exploration of these baselines.
 
 ## Models and Data
 
@@ -91,49 +105,50 @@ To establish some expectations we start with GPT-2 (small), which has $d$ = 768,
 
 The figure below shows histograms of the $W_Q$ weight distribution for the 12 attention heads in layer 0. Each of these can be thought of as a separate system of $\sim$ 49,000 degrees of freedom. At initialization all heads are drawn from the same distribution $\mathcal{N}(0, \sigma_0)$, but as you can see they evolve differently during training.
 
-![Figure 4: W_Q weight distributions for 12 attention heads in GPT-2 layer 0](/images/transformer-analysis/gpt2_wq_layer0_linear.png)
+![Figure 5: W_Q weight distributions for 12 attention heads in GPT-2 layer 0](/images/transformer-analysis/gpt2_wq_layer0_linear.png)
 
-<p class="fig-caption">Figure 4: $W_Q$ weight distributions for 12 attention heads in GPT-2 layer 0 (linear scale). Despite identical initialization, the trained distributions develop distinct widths and shapes.</p>
+<p class="fig-caption">Figure 5: $W_Q$ weight distributions for 12 attention heads in GPT-2 layer 0 (linear scale). Despite identical initialization, the trained distributions develop distinct widths and shapes.</p>
 
 The same distributions on a logarithmic vertical scale, with Gaussian fits overlaid, reveal not only that the distributions have different $\sigma$ values but that they show different levels of deviation from normality. Some heads remain well-described by a Gaussian; others develop heavier tails, particularly on the negative side.
 
-![Figure 5: Same distributions on logarithmic scale with Gaussian fits](/images/transformer-analysis/gpt2_wq_layer0_log.png)
+![Figure 6: Same distributions on logarithmic scale with Gaussian fits](/images/transformer-analysis/gpt2_wq_layer0_log.png)
 
-<p class="fig-caption">Figure 5: Same distributions as Figure 4, on logarithmic scale with Gaussian fits. Deviations from the Gaussian envelope, visible as excess probability in the tails, vary substantially across heads.</p>
+<p class="fig-caption">Figure 6: Same distributions as Figure 5, on logarithmic scale with Gaussian fits. Deviations from the Gaussian envelope, visible as excess probability in the tails, vary substantially across heads.</p>
 
 ### Distributions Across the Full Model
 
 To summarize the entire model, the figure below shows the $W_Q$ distributions for all heads across all layers as a 2D heatmap, where each row corresponds to one attention head (grouped by layer) and the color indicates log probability density. The distributions generally narrow as one goes deeper in the network. While different heads in the same layer tend to be similar, the figure reveals a few cases where particular heads show very different behavior from these general trends.
 
-![Figure 6: W_Q heatmap across all heads and layers of GPT-2](/images/transformer-analysis/gpt2_wq_heatmap.png)
+![Figure 7: W_Q heatmap across all heads and layers of GPT-2](/images/transformer-analysis/gpt2_wq_heatmap.png)
 
-<p class="fig-caption">Figure 6: $W_Q$ weight distributions across all heads and layers of GPT-2 (small), shown as a 2D heatmap on logarithmic color scale. Each row is one head; layers are separated by dashed lines. The general trend is narrowing with depth, but individual heads can deviate substantially.</p>
+<p class="fig-caption">Figure 7: $W_Q$ weight distributions across all heads and layers of GPT-2 (small), shown as a 2D heatmap on logarithmic color scale. Each row is one head; layers are separated by dashed lines. The general trend is narrowing with depth, but individual heads can deviate substantially.</p>
 
 ### Summary Statistics
 
 Two summary statistics, the standard deviation $\sigma$ and the differential entropy $S = -\int P(w) \ln P(w)\, dw$ (estimated via KDE), confirm the behavior observed above. The distributions qualitatively narrow with depth, but there are large variations among heads within the same layer that are of a similar scale as the overall downward trend.
 
-![Figure 7: Summary statistics across GPT-2 attention heads](/images/transformer-analysis/gpt2_wq_summary_stats.png)
+![Figure 8: Summary statistics across GPT-2 attention heads](/images/transformer-analysis/gpt2_wq_summary_stats.png)
 
-<p class="fig-caption">Figure 7: Standard deviation (blue) and entropy (red) across all attention heads in GPT-2 (small), ordered by layer. Vertical dashed lines separate layers. Both statistics show a general decrease with depth, modulated by substantial head-to-head variation within each layer.</p>
+<p class="fig-caption">Figure 8: Standard deviation (blue) and entropy (red) across all attention heads in GPT-2 (small), ordered by layer. Vertical dashed lines separate layers. Both statistics show a general decrease with depth, modulated by substantial head-to-head variation within each layer.</p>
 
 ### GPT-2 XL
 
 The same analysis for GPT-2 XL ($d$ = 1600, 25 heads, 48 layers) provides a useful comparison. The 2$\times$ increase in model dimension results in a 4$\times$ increase in the number of matrix elements per head, which should reduce sampling fluctuations on statistical estimators by roughly 2$\times$. The summary statistics plot does indeed look smoother. However, while this model exhibits some of the same trends as GPT-2 (small), there is a notable resurgence in the later layers: the standard deviation and entropy, after decreasing through the middle layers, increase again toward the output.
 
-![Figure 8: Summary statistics for GPT-2 XL](/images/transformer-analysis/gpt2xl_wq_summary_stats.png)
+![Figure 9: Summary statistics for GPT-2 XL](/images/transformer-analysis/gpt2xl_wq_summary_stats.png)
 
-<p class="fig-caption">Figure 8: Summary statistics for GPT-2 XL. Unlike GPT-2 (small), the standard deviation and entropy show a non-monotonic pattern with a resurgence in later layers.</p>
+<p class="fig-caption">Figure 9: Summary statistics for GPT-2 XL. Unlike GPT-2 (small), the standard deviation and entropy show a non-monotonic pattern with a resurgence in later layers.</p>
 
 ## Results: $W_{QK}$ Distributions
 
 ### Amplification of Non-Gaussianity
 
-The element-wise distributions of $W_Q$ and $W_K$ individually remain approximately Gaussian across most heads and layers. Their product $W_{QK}$, however, tells a different story. Small deviations from normality in the individual matrices are dramatically amplified by the matrix product. The $W_{QK}$ distributions develop heavy tails, particularly on the negative side, that grow much faster than those in the individual matrices.
+The element-wise distributions of $W_Q$ and $W_K$ individually remain approximately Gaussian across most heads and layers. Their product $W_{QK}$, however, tells a different story. Small deviations from normality in the individual matrices are dramatically amplified by the matrix product. The $W_{QK}$ distributions develop heavy tails that grow much faster than those in the individual matrices. For these distributions (e.g. head 8), the Gaussian fit matches well in the core, but undershoots the data in the tails. In other cases (e.g. head 1) the distribution falls too steeply near its maximum, resulting in something that is too pointy to be compatible with a Gaussian.
 
-![Figure 9: W_QK distributions for GPT-2 layer 0](/images/transformer-analysis/gpt2_wqk_layer0_log.png)
 
-<p class="fig-caption">Figure 9: $W_{QK}$ weight distributions for GPT-2 layer 0 on logarithmic scale. Compared to the individual $W_Q$ distributions (Figure 5), the deviations from Gaussianity are substantially larger, with pronounced asymmetric tails.</p>
+![Figure 10: W_QK distributions for GPT-2 layer 0](/images/transformer-analysis/gpt2_wqk_layer0_log.png)
+
+<p class="fig-caption">Figure 10: $W_{QK}$ weight distributions for GPT-2 layer 0 on logarithmic scale. Compared to the individual $W_Q$ distributions (Figure 6), the deviations from Gaussianity are substantially larger, with pronounced asymmetric tails.</p>
 
 This asymmetry is physically interesting. The $W_{QK}$ matrix is the pre-softmax attention logit matrix, so its statistical structure directly encodes what the model has learned about which tokens should attend to which. A heavier negative tail means more extreme "don't attend" signals than "do attend" signals. In the language of the softmax function, strong negative logits are effectively suppressed to zero attention weight, so the model appears to learn structured inhibition patterns.
 
@@ -141,9 +156,9 @@ This asymmetry is physically interesting. The $W_{QK}$ matrix is the pre-softmax
 
 The 2D heatmap for $W_{QK}$ shows more dramatic structure than the individual weight matrices. The variation across layers and heads is more pronounced, and the tails (visible as extended color in the heatmap wings) are clearly wider than what a Gaussian with the same $\sigma$ would produce.
 
-![Figure 10: W_QK heatmap across GPT-2](/images/transformer-analysis/gpt2_wqk_heatmap.png)
+![Figure 11: W_QK heatmap across GPT-2](/images/transformer-analysis/gpt2_wqk_heatmap.png)
 
-<p class="fig-caption">Figure 10: $W_{QK}$ distributions across all heads and layers of GPT-2 (small). The non-Gaussian character is visible as extended tails (color at large $|w|$) beyond what the central peak width would predict.</p>
+<p class="fig-caption">Figure 11: $W_{QK}$ distributions across all heads and layers of GPT-2 (small). The non-Gaussian character is visible as extended tails (color at large $|w|$) beyond what the central peak width would predict.</p>
 
 ## Cross-Model Comparison
 
@@ -151,13 +166,81 @@ Comparing across model families reveals both universal features and notable diff
 
 ### The Mistral-LLaMA Sigma Anomaly
 
-Despite identical architecture parameters ($d$ = 4096, 32 heads, 32 layers), Mistral's $W_Q$ and $W_K$ standard deviations are 5--10$\times$ smaller than LLaMA's, and this difference compounds in $W_{QK}$. Both models use the same `initializer_range` of 0.02.
+Despite identical architecture parameters ($d$ = 4096, 32 heads, 32 layers), Mistral's $W_Q$ and $W_K$ standard deviations are 5--10$\times$ smaller than LLaMA's, and this difference compounds in $W_{QK}$.
 
-The leading hypothesis is that the two models use different normalization factors in the attention scaling. If one model uses $1/\sqrt{d}$ while the other uses $1/\sqrt{d_h}$, the ratio of effective scales is $\sqrt{d/d_h} = \sqrt{4096/128} \approx$ 5.66, which matches the observed ratio nearly exactly. This finding illustrates that models with identical parameter counts and architecture can exhibit fundamentally different weight characteristics after training, suggesting different optimization landscapes.
+One hypothesis is that the two models use different normalization factors in the attention scaling. If one model uses $1/\sqrt{d}$ while the other uses $1/\sqrt{d_h}$, the ratio of effective scales is $\sqrt{d/d_h} = \sqrt{4096/128} \approx$ 5.66, which matches the observed ratio nearly exactly. This finding illustrates that models with identical parameter counts and architecture can exhibit fundamentally different weight characteristics after training, suggesting different optimization landscapes.
 
-![Figure 11: Cross-model sigma comparison](/images/transformer-analysis/cross_model_sigma.png)
+![Figure 12: Cross-model sigma comparison](/images/transformer-analysis/cross_model_sigma.png)
 
-<p class="fig-caption">Figure 11: Standard deviation of $W_Q$ across layers for several model families. The Mistral-LLaMA scale difference is clearly visible despite identical architectural dimensions.</p>
+<p class="fig-caption">Figure 12: Standard deviation of $W_Q$ across layers for several model families. The Mistral-LLaMA scale difference is clearly visible despite identical architectural dimensions.</p>
+
+A more interesting comparison is the same quantity but for $W_{QK}$, which is shown in the next figure. 
+
+
+
+### Entropy and the Gaussian Reference
+
+The differential entropy $S = -\int P(w) \ln P(w)\, dw$ and the standard deviation $\sigma$ are not independent: for a Gaussian distribution, $S = \frac{1}{2}\ln(2\pi e\,\sigma^2)$. This provides a useful reference curve. Distributions that match the Gaussian prediction have entropy fully determined by their width; deviations indicate structure in the shape of the distribution beyond what $\sigma$ alone captures.
+
+Figure 13 plots the measured entropy against $\sigma$ for every attention head in every model, with the Gaussian prediction shown as a solid curve. For $W_Q$ (left panel), the data points cluster tightly along the analytic curve, consistent with the observation that individual weight matrices remain approximately Gaussian after training. The right panel shows the same comparison for $W_{QK}$. Here the numerical reference curve for random $W_{QK}$ matrices at GPT-2 dimensions ($d$ = 768, $d_h$ = 64) is shown as a dashed red line; it falls directly on top of the Gaussian prediction, confirming that at these matrix sizes the central limit theorem has fully converged and the product-of-Gaussians distribution is effectively indistinguishable from a Gaussian in its entropy. This result holds across all model sizes in the study, establishing the Gaussian as a universal reference for both $W_Q$ and $W_{QK}$.
+
+![Figure 13: Entropy vs sigma for W_Q and W_QK](/images/transformer-analysis/entropy_vs_sigma.png)
+
+<p class="fig-caption">Figure 13: Differential entropy vs. standard deviation for all attention heads across all models. Left: $W_Q$. Right: $W_{QK}$. The solid black curve is the Gaussian prediction $S = \frac{1}{2}\ln(2\pi e\,\sigma^2)$; the dashed red curve (right panel) is the numerical result for random $W_{QK}$ at $d$ = 768, $d_h$ = 64. Both references coincide, confirming the Gaussian as the appropriate baseline.</p>
+
+To isolate the deviations, Figure 13 subtracts the Gaussian prediction and plots the residual $\Delta S = S_{\text{measured}} - \frac{1}{2}\ln(2\pi e\,\sigma^2)$. For a perfect Gaussian, $\Delta S = 0$. A negative residual indicates a distribution with less entropy than a Gaussian of the same width, pointing to sharper peaks or more concentrated probability mass; a positive residual would indicate heavier tails or broader structure.
+
+For $W_Q$ (left panel), the residuals are small and predominantly negative, consistent with slight sub-Gaussian character: the trained distributions are marginally more concentrated than their Gaussian envelopes. For $W_{QK}$ (right panel), the residuals are systematically more negative, reflecting the heavier-tailed, non-Gaussian character observed in the per-head distributions above. Despite the heavy tails visible on logarithmic scale, the net effect on the entropy is a reduction relative to the Gaussian prediction. This is consistent with a distribution that concentrates more probability near its center while simultaneously extending farther into the tails than a Gaussian would: the tail weight is too sparse to compensate for the central concentration.
+
+![Figure 14: Entropy residuals](/images/transformer-analysis/entropy_vs_sigma_residual.png)
+
+<p class="fig-caption">Figure 14: Entropy residual $\Delta S = S - \frac{1}{2}\ln(2\pi e\,\sigma^2)$ vs. $\sigma$ for all heads and models. Left: $W_Q$. Right: $W_{QK}$. Negative values indicate sub-Gaussian entropy. The $W_{QK}$ residuals are systematically larger in magnitude, reflecting the amplified non-Gaussianity of the matrix product.</p>
+
+### Correlations Among Per-Head Statistics
+In models without bias, such as Llama and Mistral, the mean remains numerically small, but is free to develop some information about the scale. For these models it is straightforward to see how a small non-Gaussian mixture develops in some heads by studying correlations among the moments.
+
+The mean, standard deviation, skewness and kurtosis and their correlations are shown in the corner plot below for Llama and Mistral.
+
+![Figure 19: Moment Correlations](/images/transformer-analysis/llama_mistral_corner_plot.png)
+
+<p class="fig-caption">Figure 19: Corner plot for first four moments of the weight distributions for each attention head shown for llama (orange) and mistral (blue). The band structures present in the 2D correlation suggest many heads that are nominally normal distributions with small mixture.</p>
+
+In the case of a mixture distribution with $N(0,\sigma_0)$ with weight $p$ and an additional localized component at $a$ with weight $1-p$, the moments are approximately related as follows:
+
+$$
+\mu \approx p·a
+\,,\quad
+\sigma^2 ≈ (1-p)\sigma_{0}² + p·a^2
+\,,\quad
+\gamma  \propto p·a^3 / \sigma^3
+\,,\quad
+\kappa ∝ p·a^4 / \sigma^4
+$$
+
+Different heads end up with different $p$ values, which trace out fixed curves in the moment correlation space rather than filling it. The easiest case to see is in the $\gamma - \kappa$ correlation, which is limited by the inequality (Pearson's Bound):
+$$
+\kappa \geq \gamma^2 + 1\,,
+$$
+when this limit is saturated it gives rise to parabolic curve in the correlation,
+
+It is also evident in the $\mu - \sigma$ correlation, where the $\sigma$ values are limited from below approximately as:
+
+$$
+\sigma(\mu) \gtrsim \frac{1}{\sqrt{p}}\sqrt{\mu^2 + \frac{1-p}{p}\sigma_0^2 }\,,
+$$
+
+and in the $\gamma - \sigma$ correlation:
+
+$$
+\sigma(\gamma) \gtrsim \sqrt{\frac{1-p}{p}} 
+\frac{\sigma_0}{\sqrt{1 - (p\gamma)^{2/3}}}
+
+$$
+
+Values clustering at or near the edge of this limit are characteristic of weight distributions that are close to a two-point or low-entropy mixture. In cases where this simple mixture picture begins to fall apart the correlations fill in the bulk of the distribution.
+
+
+In models with bias, the moments are more complicated to interpret since information is distributed between the weight and bias contributions. In these cases the mean primarily serves as a nuisance parameter. The loss of scale effectively collapses the dynamic range to be able to see this behavior.
 
 ## What Comes Next
 
@@ -166,3 +249,4 @@ This post establishes the basic distributional facts: individual weight matrices
 The next post in this series examines the singular value decomposition of $W_{QK}$, which moves beyond the element-wise marginal statistics explored here to characterize the spectral structure: how many effective dimensions each head uses, how the spectrum differs from the Marchenko-Pastur predictions, and what this reveals about the geometry of learned attention patterns. The third post will use the Pythia training checkpoints to study how all of these structures emerge during training.
 
 The code, data, and interactive dashboards for reproducing and extending this analysis are available at the links above.
+    
