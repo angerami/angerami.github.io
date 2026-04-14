@@ -10,6 +10,8 @@ tags:
   - statistical-physics
 published: true
 draft: true
+dataset_cross_model: angerami/weight_study_ana-004
+dataset_pythia_evolution: angerami/pythia-{size}-deduped_weight_evolution_001
 ---
 <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; margin-bottom: 20px;">
 <strong>⚠️ Work in Progress</strong> - This post is still being developed and may contain incomplete sections or change substantially.
@@ -17,7 +19,7 @@ draft: true
 
 [![Code](https://img.shields.io/badge/📁-Code_on_Github-blue)](https://github.com/angerami/transformer-analysis)
 [![Dashboard](https://img.shields.io/badge/📊-Interactive_Dashboard-orange)](https://huggingface.co/spaces/angerami/transformer-weights)
-[![Data](https://img.shields.io/badge/🗂️-Datasets_on_HuggingFace-yellow)](https://huggingface.co/angerami)
+[![Data](https://img.shields.io/badge/🗂️-Datasets_on_HuggingFace-yellow)](https://huggingface.co/collections/angerami/transformer-weight-evolution-study)
 
 ## Introduction
 
@@ -81,28 +83,28 @@ A notebook ([low_rank_SVD_systematics.ipynb](https://github.com/angerami/transfo
 
 The analysis uses pre-trained models available on HuggingFace. For each model, I extract the $W_Q$, $W_K$, and $W_{QK}$ matrices for every attention head across all layers, then compute element-wise histograms, summary statistics (mean, standard deviation, skewness, kurtosis), entropy measures, and the full singular value decomposition.
 
-| Model | $d$ | $n_h$ | Layers | Parameters | Notes |
-|-------|:---:|:---:|:---:|:---:|-------|
-| GPT-2 (small) | 768 | 12 | 12 | 124M | Primary illustration model |
-| GPT-2 (medium) | 1024 | 16 | 24 | 355M | |
-| GPT-2 (large) | 1280 | 20 | 36 | 774M | |
-| GPT-2 (XL) | 1600 | 25 | 48 | 1.5B | |
-| Pythia-70M | 512 | 8 | 6 | 70M | |
-| Pythia-160M | 768 | 12 | 12 | 160M | |
-| Pythia-410M | 1024 | 16 | 24 | 410M | |
-| Pythia-1B | 2048 | 8 | 16 | 1B | |
-| Pythia-1.4B | 2048 | 16 | 24 | 1.4B | |
-| Pythia-2.8B | 2560 | 32 | 32 | 2.8B | |
-| Pythia-6.9B | 4096 | 32 | 32 | 6.9B | |
-| Pythia-12B | 5120 | 40 | 36 | 12B | |
-| LLaMA 3.1 8B | 4096 | 32 | 32 | 8B | Grouped-query attention |
-| Mistral 7B v0.3 | 4096 | 32 | 32 | 7B | Grouped-query attention |
+| Model | $d$ | $n_h$ | $d_h$ | Layers | Parameters | Notes |
+|-------|:---:|:---:|:---:|:---:|:---:|-------|
+| GPT-2 (small) | 768 | 12 | 64 | 12 | 124M | Primary illustration model |
+| GPT-2 (medium) | 1024 | 16 | 64 | 24 | 355M | |
+| GPT-2 (large) | 1280 | 20 | 64 | 36 | 774M | |
+| GPT-2 (XL) | 1600 | 25 | 64 | 48 | 1.5B | |
+| LLaMA 3.1 8B | 4096 | 32 | 128 | 32 | 8B | Grouped-query attention |
+| Mistral 7B v0.3 | 4096 | 32 | 128 | 32 | 7B | Grouped-query attention |
+| Pythia-70M | 512 | 8 | 64 | 6 | 70M | |
+| Pythia-160M | 768 | 12 | 64 | 12 | 160M | |
+| Pythia-410M | 1024 | 16 | 64 | 24 | 410M | |
+| Pythia-1B | 2048 | 8 | 256 | 16 | 1B | |
+| Pythia-1.4B | 2048 | 16 | 128 | 24 | 1.4B | |
+| Pythia-2.8B | 2560 | 32 | 80 | 32 | 2.8B | |
+| Pythia-6.9B | 4096 | 32 | 128 | 32 | 6.9B | |
+| Pythia-12B | 5120 | 40 | 128 | 36 | 12B | |
 
-<p class="fig-caption">Table 1: Models included in this study. All models are publicly available on HuggingFace. LLaMA and Mistral use grouped-query attention (GQA), where the number of K/V heads is smaller than Q heads; K heads are expanded via <code>repeat_interleave</code> to match the Q head count before computing $W_{QK}$. Pre-computed statistics for all models are available at <a href="https://huggingface.co/datasets/angerami/weight_study_ana-003"><code>angerami/weight_study_ana-003</code></a>.</p>
+<p class="fig-caption">Table 1: Models included in this study. All models are publicly available on HuggingFace. LLaMA and Mistral use grouped-query attention (GQA), where the number of K/V heads is smaller than Q heads; K heads are expanded via <code>repeat_interleave</code> to match the Q head count before computing $W_{QK}$. Pre-computed statistics for all models are available at <a href="https://huggingface.co/datasets/{{ page.dataset_cross_model }}"><code>{{ page.dataset_cross_model }}</code></a>.</p>
 
 The Pythia model suite, developed by EleutherAI, provides an additional dimension: 154 training checkpoints from initialization to convergence, enabling the study of how these distributions evolve during training. The time-evolution analysis is deferred to a subsequent post, but the Pythia models appear in the cross-model comparisons below.
 
-All pre-computed statistics are published on HuggingFace under [`angerami/weight_study_ana-003`](https://huggingface.co/datasets/angerami/weight_study_ana-003) (cross-model, all 14 models) and `angerami/pythia-{size}-deduped_weight_evolution_001` (training dynamics, deferred to a later post). An interactive Streamlit dashboard for exploring the data is available on [HuggingFace Spaces](https://huggingface.co/spaces/angerami/transformer-weights).
+All pre-computed statistics are published on HuggingFace under [`{{ page.dataset_cross_model }}`](https://huggingface.co/datasets/{{ page.dataset_cross_model }}) (cross-model, all 14 models) and `{{ page.dataset_pythia_evolution }}` (training dynamics, deferred to a later post). An interactive Streamlit dashboard for exploring the data is available on [HuggingFace Spaces](https://huggingface.co/spaces/angerami/transformer-weights).
 
 ## Results: Weight Distributions in GPT-2
 
@@ -285,4 +287,6 @@ This post establishes the basic distributional facts: individual weight matrices
 The next post in this series examines the singular value decomposition of $W_{QK}$, which moves beyond the element-wise marginal statistics explored here to characterize the spectral structure: how many effective dimensions each head uses, how the spectrum differs from the Marchenko-Pastur predictions, and what this reveals about the geometry of learned attention patterns. The third post will use the Pythia training checkpoints to study how all of these structures emerge during training.
 
 The code, data, and interactive dashboards for reproducing and extending this analysis are available at the links above.
-    
+
+
+

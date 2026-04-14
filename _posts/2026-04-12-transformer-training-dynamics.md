@@ -31,6 +31,8 @@ The interactive dashboard linked above supports direct exploration of these stat
 
 ## Basic Results
 
+
+
 ### Element-Wise Distributions Across Training
 
 <!-- TODO: decide whether to lead with W_Q or jump straight to W_QK. Post-3 notes say "undecided". For now, stub shows W_QK directly. -->
