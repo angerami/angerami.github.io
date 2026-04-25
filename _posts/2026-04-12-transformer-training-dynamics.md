@@ -8,7 +8,7 @@ permalink: /posts/2026/transformer-training-dynamics/
 tags:
   - transformers
   - statistical-physics
-published: false
+published: true
 draft: true
 ---
 <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; margin-bottom: 20px;">
@@ -25,7 +25,7 @@ The [previous posts](/posts/2026/transformer-singular-values/) in this series ch
 
 The Pythia model suite provides an unusual resource for this: a set of models spanning 70M to 12B parameters, each with approximately 154 publicly released checkpoints taken at regular intervals across pretraining on the Pile. Rather than inferring training history from the endpoint, these checkpoints allow the spectral statistics of $W_{QK}$ to be tracked directly as a function of training step. The reference model throughout is Pythia-410M ($d = 1024$, $n_h = 16$, $d_h = 64$, 24 layers), which is large enough to exhibit diverse head behavior while remaining computationally tractable for a full checkpoint sweep.
 
-The central questions are: when during training does the spectral structure of $W_{QK}$ consolidate? Do different heads converge on their final geometry at different rates? And does the layer-dependent organization identified in the static analysis — early layers developing the most concentrated spectra — emerge early in training or gradually across the full pretraining horizon?
+The central questions are: when during training does the spectral structure of $W_{QK}$ consolidate? Do different heads converge on their final geometry at different rates? And does the layer-dependent organization identified in the static analysis (e.g. early layers developing the most concentrated spectra),emerge early in training or gradually across the full pretraining horizon?
 
 The interactive dashboard linked above supports direct exploration of these statistics across the Pythia suite.
 
