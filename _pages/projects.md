@@ -22,8 +22,7 @@ This project treats transformer weights as a dynamical system, developing a stat
 The analysis spans multiple architectures (GPT-2, LLaMA, Mistral) and scales (70M to 12B parameters), with temporal analysis across 154 Pythia training checkpoints. Within individual models, different layers and attention heads exhibit distinct patterns of behavior—and for Pythia, plotting singular values against training step reveals particle-like trajectories as modes emerge and stabilize during optimization. The work produces open-source code, HuggingFace datasets, and interactive visualization dashboards.
 
 **Resources:**
-<!-- - 📝 [Read the theory post](/posts/transformer-spin) *(coming soon)* -->
-- 📝 [Read the post](/posts/2026/transformer-analysis) 
+- 📝 [Read the series](/posts/transformer-spin/)
 - 💻 [Code repository](https://github.com/angerami/transformer-analysis)
 - 🎮 [Interactive explorer](https://huggingface.co/spaces/angerami/transformer-weights)
 
