@@ -22,9 +22,8 @@ This project treats transformer weights as a dynamical system, developing a stat
 The analysis spans multiple architectures (GPT-2, LLaMA, Mistral) and scales (70M to 12B parameters), with temporal analysis across 154 Pythia training checkpoints. Within individual models, different layers and attention heads exhibit distinct patterns of behavior—and for Pythia, plotting singular values against training step reveals particle-like trajectories as modes emerge and stabilize during optimization. The work produces open-source code, HuggingFace datasets, and interactive visualization dashboards.
 
 **Resources:**
-- 📝 [Read the series](/posts/transformer-spin/)
-- 💻 [Code repository](https://github.com/angerami/transformer-analysis)
-- 🎮 [Interactive explorer](https://huggingface.co/spaces/angerami/transformer-weights)
+
+📝 [Read the series](/posts/transformer-spin/) &nbsp; [![Code](https://img.shields.io/badge/📁-Code_on_Github-blue)](https://github.com/angerami/transformer-analysis) [![Dashboard](https://img.shields.io/badge/📊-Interactive_Dashboard-orange)](https://huggingface.co/spaces/angerami/transformer-weights) [![Data](https://img.shields.io/badge/🗂️-Datasets_on_HuggingFace-yellow)](https://huggingface.co/collections/angerami/transformer-weight-evolution-study)
 
 
 ## Spectral Structure in Neural Network Solutions of the KdV Equation
@@ -34,9 +33,8 @@ Independent Research
 This project trains physics-informed neural networks to solve the Korteweg–de Vries equation, a prototypical integrable nonlinear wave equation whose soliton solutions arise from a precise balance between nonlinear steepening and dispersion. Rather than imposing conventional boundary conditions on the field, the PINN is driven by scattering data from the inverse scattering transform — eigenvalues and norming constants of an associated Schrödinger operator — making the boundary value problem an inverse spectral problem. The KdV equation's integrability provides a powerful validation framework: an infinite hierarchy of conservation laws, each computable via autograd, serves as unsupervised diagnostics that are independent of the training loss. The learned solutions preserve these conservation laws locally throughout the domain and, more strikingly, retain the full spectral structure of the Lax pair — isospectrality and eigenfunction dynamics — without any explicit spectral inductive bias in the architecture or loss function. The approach scales to multi-soliton configurations, with an interactive explorer for visualizing soliton interactions, eigenvalue recovery, and eigenfunction evolution in real time.
 
 **Resources:**
-- 📝 [Read the post](/posts/2026/kdv-pinn) 
-- 💻 [Code repository](https://github.com/angerami/kdv-pinn)
-- 🎮 [Interactive explorer](https://huggingface.co/spaces/angerami/kdv-pinn)
+
+📝 [Read the post](/posts/2026/kdv-pinn) &nbsp; [![Code](https://img.shields.io/badge/📁-Code_on_Github-blue)](https://github.com/angerami/kdv-pinn) [![Dashboard](https://img.shields.io/badge/📊-Interactive_Demo-orange)](https://huggingface.co/spaces/angerami/kdv-pinn)
 
 ## Generative Modeling of Grateful Dead Setlists
 **2025 - Present**  

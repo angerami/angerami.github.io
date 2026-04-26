@@ -3,7 +3,7 @@ title: "Training Dynamics of Transformer Attention Heads"
 date: 2026-04-12
 excerpt: "A time-dependent study of W_QK statistics across training checkpoints in the Pythia model suite: how spectral structure, participation ratios, and head diversity evolve during pretraining."
 series: "transformer-spin"
-series_order: 4
+series_order: 3
 permalink: /posts/2026/transformer-training-dynamics/
 tags:
   - transformers
