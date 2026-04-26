@@ -3,7 +3,7 @@ title: "Weight Distributions in Transformer Attention Heads"
 date: 2026-01-16
 excerpt: "An empirical study of the statistical distributions of W_Q, W_K, and W_QK weight matrices across transformer architectures."
 series: "transformer-spin"
-series_order: 2
+series_order: 1
 permalink: /posts/2026/transformer-analysis/
 tags:
   - transformers

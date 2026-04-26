@@ -3,7 +3,7 @@ title: "Singular Value Structure of Transformer Attention Heads"
 date: 2026-03-30
 excerpt: "An empirical study of the singular value spectra of W_QK matrices across transformer architectures: spectral distributions, participation ratios, and what they reveal about learned attention geometry."
 series: "transformer-spin"
-series_order: 3
+series_order: 2
 permalink: /posts/2026/transformer-singular-values/
 tags:
   - transformers
