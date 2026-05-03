@@ -18,12 +18,13 @@ author_profile: true
 **2024 - Present**  
 *Independent Research*
 
-This project treats transformer weights as a dynamical system, developing a statistical analysis pipeline that extracts interpretable metrics to track training evolution. The framework applies singular value decomposition, entropy, and KL divergence to characterize how attention mechanism weights evolve, revealing structure in the optimization process.
-The analysis spans multiple architectures (GPT-2, LLaMA, Mistral) and scales (70M to 12B parameters), with temporal analysis across 154 Pythia training checkpoints. Within individual models, different layers and attention heads exhibit distinct patterns of behavior—and for Pythia, plotting singular values against training step reveals particle-like trajectories as modes emerge and stabilize during optimization. The work produces open-source code, HuggingFace datasets, and interactive visualization dashboards.
+This project treats transformer weights as a dynamical system and applies methods from statistical physics to provide insight into their behavior. The work develops a statistical analysis pipeline that ingests trained models and extracts a set of interpretable metrics to characterize their behavior and track its evolution during training. The framework supports both an empirical characterization of the weights and a physics-motivated interpretation grounded in the correspondence between transformer self-attention and the statistical mechanics of spin systems. The analysis spans multiple architectures (e.g. GPT-2, LLaMA, Mistral) at scales from 70M to 12B parameters, with a temporal study across training checkpoints, and produces open-source code, HuggingFace datasets, and interactive visualization dashboards.
 
 **Resources:**
 
-📝 [Read the series](/posts/transformer-spin/) &nbsp; [![Code](https://img.shields.io/badge/📁-Code_on_Github-blue)](https://github.com/angerami/transformer-analysis) [![Dashboard](https://img.shields.io/badge/📊-Interactive_Dashboard-orange)](https://huggingface.co/spaces/angerami/transformer-weights) [![Data](https://img.shields.io/badge/🗂️-Datasets_on_HuggingFace-yellow)](https://huggingface.co/collections/angerami/transformer-weight-evolution-study)
+📝 [Read the series](/posts/transformer-spin/) &nbsp; 
+
+[![Code](https://img.shields.io/badge/📁-Code_on_Github-blue)](https://github.com/angerami/transformer-analysis) [![Dashboard](https://img.shields.io/badge/📊-Interactive_Dashboard-orange)](https://huggingface.co/spaces/angerami/transformer-weights) [![Data](https://img.shields.io/badge/🗂️-Datasets_on_HuggingFace-yellow)](https://huggingface.co/collections/angerami/transformer-weight-evolution-study)
 
 
 ## Spectral Structure in Neural Network Solutions of the KdV Equation

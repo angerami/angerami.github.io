@@ -117,7 +117,21 @@ To visualize the diversity of head trajectories more globally, we apply UMAP to 
 
 The embeddings reveal a two qualitatively distinct trajectory types. The element-wise and spectral views show similar overall organization, suggesting that the same trajectory taxonomy is visible regardless of which summary statistic is used. Whether these clusters correspond to functional head types, or different types of "learners" is a natural question for future work.
 
+## Interactive Animations
 
+The static heatmaps in Figs. 4 and 9 collapse the time axis into a second spatial dimension; an alternative is to keep the layer × head architecture as the primary view and step through training time directly. The two embeds below provide that view for $\sigma$ and the stable rank: the central panel shows the statistic across all 384 attention heads of Pythia-1.4B at a fixed step, with marginal traces showing the head-averaged trajectory by layer (right) and the layer-averaged trajectory by head (bottom). Use the play button or scrub the slider to advance through the 154 checkpoints.
+
+<iframe src="/images/transformer-analysis/tp_architecture_evolution_sigma.html"
+        width="100%" height="830" frameborder="0"
+        style="border:1px solid #ddd; border-radius:4px;"></iframe>
+<p class="fig-caption">Figure 11: Architecture-wide evolution of $\sigma$ across training. The central heatmap shows $\sigma$ for every (layer, head) at the selected training step; right and bottom marginals are the layer- and head-averaged values at that step.</p>
+
+<iframe src="/images/transformer-analysis/tp_architecture_evolution_stable_rank.html"
+        width="100%" height="830" frameborder="0"
+        style="border:1px solid #ddd; border-radius:4px;"></iframe>
+<p class="fig-caption">Figure 12: Architecture-wide evolution of the stable rank $r_s = \|W\|_F^2 / \|W\|_2^2$ across training, in the same format as Fig. 11.</p>
+
+Played end to end, the early-training rearrangement that drives the heatmaps in Figs. 4 and 9 is immediately visible: the $\sigma$ animation shows the within-layer spread widening through the first ~20k steps before settling into a slowly-drifting steady state, while the stable-rank animation makes the rapid early collapse onto a few leading directions, and the subsequent partial recovery, easier to follow than any static slice.
 
 ## What Comes Next
 
